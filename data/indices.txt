@@ -1,0 +1,112 @@
+﻿#Chlorophyll content (z elánku: Main et al. 2011)
+MCARI=((X700-X670)-0.2*(X700-X550))*(X700/X670) 	# (Main et al. 2011; Daughtry et al. 2000)
+MCARI2=((X750-X705)-0.2*(X750-X550))*(X750/X705)     	#  canopy, chl (Main et al. 2011; Wu et al. 2008)
+TCARI=3*((X700-X670)-0.2*(X700-X550)*(X700/X670)) 	# (Main et al. 2011; Haboudane et al. 2002)
+OSAVI=(1+0.16)*(X800-X670)/(X800+X670+0.16)  		# (Main et al. 2011; Rondeaux et al 1996)
+OSAVI2=(1+0.16)*(X750-X705)/(X750+X705+0.16) 		#  canopy, chl (Main et al. 2011; Wu et al. 2008)
+TCARIOSAVI=TCARI/OSAVI  				# (Main et al. 2011; Haboudane et al. 2002)
+MCARIOSAVI=MCARI/OSAVI   				# (Main et al. 2011; Daughtry et al. 2000)
+MCARI2OSAVI2=MCARI2/OSAVI2                              # (Main et al. 2011; Wu et al. 2008)
+TVI=0.5*(120*(X750-X550)-200*(X670-X550))    		# (Main et al. 2011; Broge and Leblanc 2000)
+MTCI=(X754-X709)/(X709-X681)       			#  MERIS Terrestrial chlorophyll index, canopy, chl (Main 2011) (Dash and Curran 2004)
+mND705=(X750-X705)/(X750+X705-2*X445)     # leaf, tot chl (Main et al. 2011; Sims and Gamon 2002)
+Gitelson2=(X750-X800/X695-X740)-1         # leaf, chl (Main et al. 2011; Gitelson et al. 2003)
+Maccioni=(X780-X710)/(X780-X680)          # leaf, chl (Main et al. 2011; Maccioni et al. 2001)
+Vogelmann=X740/X720                       # leaf, chl (Main et al. 2011; Vogelmann et al. 1993)
+Vogelmann2=(X734-X747)/(X715+X726)        # leaf, chl (Main et al. 2011; Vogelmann et al. 1993)
+Datt=(X850-X710)/(X850-X680)              # leaf, chl (Main et al. 2011; Datt 1999)
+Datt2=X850/X710                           # leaf, chl (Main et al. 2011; Datt 1999)
+SR1=X750/X710                             # leaf, chl (Main et al. 2011; Zarco-Tejada and Miller 1999); oznaceno jako CIrededge v Hernandez-Clemente
+SR2=X440/X690 				  # leaf, stress, ( Main et al. 2011;Lichtenthaler et al. 1996)
+DD=(X749-X720)-(X701-X672)                # ( Main et al. 2011; le Maire et al. 2004); (Double Difference Index) Leaf, tot Chl
+Carter=X695/X420                          # leaf, stress (Main et al. 2011; Carter 1994)
+Carter2=X710/X760                         # leaf, stress (Main et al. 2011; Carter 1994)
+REP_LI=700+40*((X670+X780/2)/(X740-X700)) # (Main et al. 2011; Guyot and Baret 1988)
+# Pigmenty
+PSSRa=X800/X680  # Blackburn 1998 Chla Pigment specific simple ratio
+PSSRb=X800/X635  # Blackburn 1998 Chlb 
+PSSRc=X800/X470  # Blackburn 1998 Cars
+PSNDa=(X800-X680)/(X800+X680)  # Blackburn 1998 Chla Pigment specific normalized difference	
+PSNDb=(X800-X635)/(X800+X635)  # Blackburn 1998 Chlb
+PSNDc=(X800-X470)/(X800+X470) # Blackburn 1998 Chlc
+SIPI=(X800-X445)/(X800-X680)  # HRSoV 311, Car/Cab-Blackburn 1998
+SIPI2=(X800-X455)/(X800-X680) #Blackburn 1999
+CRI550=(1/X515)-(1/X550)  		 # prehled z clanku Q. Yi et al. 2014; Gitelson et al. 2003, 2006
+CRI700=(1/X515)-(1/X700)   		 # prehled z clanku Q. Yi et al. 2014 Gitelson et al. 2003, 2006
+RNIRCRI550=((1/X515-1/X550)*X770)	 # prehled z clanku Q. Yi et al. 2014 Gitelson et al. 2003, 2006
+RNIRCRI700=(1/X515-1/X700)*X770  	 # prehled z clanku Q. Yi et al. 2014 Gitelson et al. 2003, 2006
+PRICI=(X570-X530)/(X570+X530)*(X760/X700-1) 	# prehled z clanku Q. Yi et al. 2014, Carotenoid/chlorophyll ratio
+PSRI=(X680-X500)/X750 			 #  prehled z clanku Q. Yi et al. 2014; Merzlyak et al. 1999
+PRI=(X570-X530)/(X570+X530) 		 # HRSoV 312, prehled z clanku Q. Yi et al. 2014;Gamon et al. 1992
+PRIm1=(X515-X530)/(X515+X530) 		 # prehled z clanku Q. Yi et al. 2014; Hernández-Clemente et al. 2011
+SRPI=X430/X680				 # Simple Ratio Pigment Index, Leaf Total pigments, stress (Penuelas et al.  1995)
+NPI=(X415-X435)/(X415+X435) 		 # Normalized Phaeophytinization index (Penuelas et al.  1995)
+NPCI=(X680-X430)/(X680+X430) 		 # Normalised Pigment chlorophyll Index, Leaf Total pigments, stress
+NDVI=(X800-X670)/(X800+X670) 		 # (Hernández-Clemente et al. 2012; Rouse et al. 1974)
+# Moje vybrané
+# z Misurec 2016
+REP=700+40*((((X670+X780)/2)-X700)/(X740-X700)) 	# (Mi?urec 2016; Curran et al 1995)
+RDVI=(X800-X670)/sqrt(X800+X670)  			# (Mi?urec 2016; Roujean and Breon 1995)
+MSR=((800-670)-1)/sqrt((X800/X670)+1) 			# (Mi?urec 2016; Chen 1996 )
+MSAVI=0.5*((2*X800+1-sqrt((X800+1)^(2))-8*(X800-X670))) 	# (Mi?urec 2016; Qi et al. 1994)
+N705=(X705-X675)/(X750-X670)				# (Mi?urec 2016; Campbell et al. 2004)
+N715=(X715-X675)/(X750-X670)				# (Mi?urec 2016; Campbell et al. 2004)
+N725=(X725-X675)/(X750-X670)                     	# (Mi?urec 2016; Campbell et al. 2004)
+# Croft et al.2014
+BGI=(X450/X550)                      	# (Croft et al. 2014; Zarco-Tejada et al. 2005 )                              
+BI=(X800+X670+X550)/sqrt(3) 		# (Croft et al. 2014; Liu and Moore 1990  )                              
+CI=(X800-X550)/X800                     # (Croft et al. 2014; Liu and Moore 1990 )                              	
+Carter3=X695/X760  			# (Croft et al. 2014; Carter 1994 )                              
+CUR=(X675*X690)/X683^(3)		# (Croft et al. 2014; Zarco-Tejada et al. 2001)                              
+DVI=X800-X670  				# (Croft et al. 2014; Jordan 1969)
+G=(X554/X677)				# (Croft et al. 2014; Zarco-Tejada et al. 2005 )                              
+GM_94a=(X750/X700) 			#  (Croft et al. 2014; Gitelson and Merzlyak 1994)
+gNDVI780=(X780-X550)/(X780+X550)  	#  (Croft et al. 2014; Smith et al. 1995)                              
+GRg=(X800/X550)-1    			# (Croft et al. 2014; Gitelson et al. 2003)                                                         
+MCARI1=1.2*(2.5*(X800-X670)-1.3*(X800-X550))  # (Croft et al. 2014; Haboudane et al. 2004)
+McM_94=X700/X670   			# (Croft et al. 2014;McMurtrey et al. 1994 )                              
+MND=(X750-X445)/(X750+X705-2*X445) 	# Croft et al. 2014; Sims and Gamon 2002
+MNDVI1=(X755-X745)/(X755+X745)		# Croft et al. 2014; Mutanga and Skidmore 2004
+MNDVI8=(X755-X730)/(X755+X730)		# Croft et al. 2014; Mutanga and Skidmore 2004
+MNDVIre=(X750-X705)/(X750+X705-X445)	# Croft et al. 2014; Sims and Gamon 2002
+NDVIre=(X750-X705)/(X750+X705)		# Croft et al. 2014; Gitelson and Merzlyak 1994	
+Rre=(X670+X780)/2			# Croft et al. 2014; Guyot and Baret 1988
+REIP=(700+40*((Rre-X700)/(X740-X700)))/100  # Croft et al. 2014; Guyot and Baret 1988
+RMSR=((X750/X705)-1)/sqrt((X750/X705)+1) 	# Croft et al. 2014; Wu et al., 2008
+RTCARI=3*((X750-X705)-0.2*(X750-X550)*(X750/X705)) # Croft et al. 2014; Wu et al., 2008
+SIPI3=(X800-X455)/(X800+X705)			# Croft et al. 2014; Penuelas et al. 1995
+SR=X800/X670					# Croft et al. 2014; Jordan 1969
+SR750550=X750/X550				# (Croft et al. 2014; Gitelson and Merzlyak 1997 )  
+VI700=(X700-X670)/(X700+X670)			# Croft et al. 2014; Gitelson et al. 2002
+# Dusík
+NDNI=(log(1/X1510)-log(1/X1680))/(log(1/X1510)+log(1/X1680))  # Serrano 2002; "Remote sensing of nitrogen and lignin in Mediterranean vegetation from AVIRIS data..."/Herrmann 2010; "SWIR-based spectral indices for assessing nitrogen content in potatoe fields"
+Ncont1510=X1510
+NLcont1690=X1690
+NLCcont1940=X1940
+Ncont2060=X2060
+Ncont2180=X2180
+Ncont2300=X2300
+NCcont2350=X2350  # v?echny sebrány z databáze IDB, z elánku Curran 1989; Remote sensing of foliar chemistry
+# Celuloza
+CAI=0.5*((X2030+X2210)-X2100)  # Cellulose Absorption Index (Nagler et al. 2003-Asi není puvodní, ale nedoká?u donajít. První zmínka o tichto vln. délkách je v Elvidge 1988)
+CAI2=0.5*((X2020+X2220)-X2100) # Cellulose Absorption Index 2, oba od Daughtry 2001, Discriminating crop residues from soil...
+CLcont1200=X1200
+Ccont1490=X1490
+Ccont1540=X1540
+Ccont1780=X1780
+Ccont1820=X1820
+Ccont2100=X2100
+Ccont2270=X2270
+Ccont2280=X2280
+Ccont2340=X2340
+# v?echny sebrány z databáze IDB, z elánku Curran 1989; Remote sensing of foliar chemistry
+# Lignin
+NDLI=(log(1/X1754)-log(1/X1680))/(log(1/X1754)+log(1/X1680)) #Norm.Dif.Lignin index;Serrano 2002
+Lcont1120=X1120
+Lcont1420=X1420
+Lcont1450=X1450 # v?echny sebrány z databáze IDB, z elánku Curran 1989; Remote sensing of foliar chemistry
+# leMaire 2008
+NDchl=(X925-X710)/(X925+X710)
+NDLMA=(X2226-X1490)/(X2226+X1490)
+DLAI=X1725-X970
+NDBleaf=(X2160-X1540)/(X2160+X1540)
